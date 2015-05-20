@@ -1,4 +1,4 @@
-unit Unit3;
+п»їunit Unit3;
 
 interface
 
@@ -56,7 +56,7 @@ begin
   now_view:=1;
    qry1.Active:=False;
    qry1.SQL.Clear;
-   qry1.SQL.Add('SELECT * From [Учасники]');
+   qry1.SQL.Add('SELECT * From [РЈС‡Р°СЃРЅРёРєРё]');
    qry1.Active:=True;
    page_max:=qry1.Recordset.RecordCount;
     if(page_max>0) then
@@ -64,22 +64,22 @@ begin
       
    ADOQuery1.Active:=False;
    ADOQuery1.SQL.Clear;
-   ADOQuery1.SQL.Add('SELECT [Код турніра], [Результат] From [Учасники турніра] WHERE [Код учасника] = '+intToStr(now_view));
+   ADOQuery1.SQL.Add('SELECT [РљРѕРґ С‚СѓСЂРЅС–СЂР°], [Р РµР·СѓР»СЊС‚Р°С‚] From [РЈС‡Р°СЃРЅРёРєРё С‚СѓСЂРЅС–СЂР°] WHERE [РљРѕРґ СѓС‡Р°СЃРЅРёРєР°] = '+intToStr(now_view));
    ADOQuery1.Active:=True;
 
    qry1.Active:=False;
    qry1.SQL.Clear;
-   qry1.SQL.Add('SELECT * From [Учасники] WHERE [Код учасника] = '+intToStr(now_view));
+   qry1.SQL.Add('SELECT * From [РЈС‡Р°СЃРЅРёРєРё] WHERE [РљРѕРґ СѓС‡Р°СЃРЅРёРєР°] = '+intToStr(now_view));
    qry1.Active:=True;
-   edt1.Text:= qry1.FieldByName('Код учасника').AsString;
-   edt2.Text:= qry1.FieldByName('Пірзвище').AsString;
-   edt3.Text:= qry1.FieldByName('Ім’я').AsString;
-   edt4.Text:= qry1.FieldByName('По батькові').AsString;
-   edt5.Text:= qry1.FieldByName('Дата народження').AsString;
-   edt6.Text:= qry1.FieldByName('Домашня адреса').AsString;
-   edt7.Text:= qry1.FieldByName('Розряд').AsString;
-   edt8.Text:= qry1.FieldByName('Код тренера').AsString;
-   edt9.Text:= qry1.FieldByName('Рейтенг учасника').AsString;
+   edt1.Text:= qry1.FieldByName('РљРѕРґ СѓС‡Р°СЃРЅРёРєР°').AsString;
+   edt2.Text:= qry1.FieldByName('РџС–СЂР·РІРёС‰Рµ').AsString;
+   edt3.Text:= qry1.FieldByName('Р†РјвЂ™СЏ').AsString;
+   edt4.Text:= qry1.FieldByName('РџРѕ Р±Р°С‚СЊРєРѕРІС–').AsString;
+   edt5.Text:= qry1.FieldByName('Р”Р°С‚Р° РЅР°СЂРѕРґР¶РµРЅРЅСЏ').AsString;
+   edt6.Text:= qry1.FieldByName('Р”РѕРјР°С€РЅСЏ Р°РґСЂРµСЃР°').AsString;
+   edt7.Text:= qry1.FieldByName('Р РѕР·СЂСЏРґ').AsString;
+   edt8.Text:= qry1.FieldByName('РљРѕРґ С‚СЂРµРЅРµСЂР°').AsString;
+   edt9.Text:= qry1.FieldByName('Р РµР№С‚РµРЅРі СѓС‡Р°СЃРЅРёРєР°').AsString;
 end;
 
 procedure TForm3.btn2Click(Sender: TObject);
@@ -90,21 +90,21 @@ begin
       now_view:=now_view+1;
        qry1.Active:=False;
        qry1.SQL.Clear;
-       qry1.SQL.Add('SELECT * From [Учасники] WHERE [Код учасника] = '+intToStr(now_view));
+       qry1.SQL.Add('SELECT * From [РЈС‡Р°СЃРЅРёРєРё] WHERE [РљРѕРґ СѓС‡Р°СЃРЅРёРєР°] = '+intToStr(now_view));
        qry1.Active:=True; 
        if(now_view=1) then
           btn1.Enabled:=False;
         if(page_max=now_view) then
           btn2.Enabled:=False;
-       edt1.Text:= qry1.FieldByName('Код учасника').AsString;
-       edt2.Text:= qry1.FieldByName('Пірзвище').AsString;
-       edt3.Text:= qry1.FieldByName('Ім’я').AsString;
-       edt4.Text:= qry1.FieldByName('По батькові').AsString;
-       edt5.Text:= qry1.FieldByName('Дата народження').AsString;
-       edt6.Text:= qry1.FieldByName('Домашня адреса').AsString;
-       edt7.Text:= qry1.FieldByName('Розряд').AsString;
-       edt8.Text:= qry1.FieldByName('Код тренера').AsString;
-       edt9.Text:= qry1.FieldByName('Рейтенг учасника').AsString;
+       edt1.Text:= qry1.FieldByName('РљРѕРґ СѓС‡Р°СЃРЅРёРєР°').AsString;
+       edt2.Text:= qry1.FieldByName('РџС–СЂР·РІРёС‰Рµ').AsString;
+       edt3.Text:= qry1.FieldByName('Р†РјвЂ™СЏ').AsString;
+       edt4.Text:= qry1.FieldByName('РџРѕ Р±Р°С‚СЊРєРѕРІС–').AsString;
+       edt5.Text:= qry1.FieldByName('Р”Р°С‚Р° РЅР°СЂРѕРґР¶РµРЅРЅСЏ').AsString;
+       edt6.Text:= qry1.FieldByName('Р”РѕРјР°С€РЅСЏ Р°РґСЂРµСЃР°').AsString;
+       edt7.Text:= qry1.FieldByName('Р РѕР·СЂСЏРґ').AsString;
+       edt8.Text:= qry1.FieldByName('РљРѕРґ С‚СЂРµРЅРµСЂР°').AsString;
+       edt9.Text:= qry1.FieldByName('Р РµР№С‚РµРЅРі СѓС‡Р°СЃРЅРёРєР°').AsString;
    end else btn2.Enabled:=False;
 end;
 procedure TForm3.btn1Click(Sender: TObject);
@@ -115,21 +115,21 @@ begin
       now_view:=now_view-1;
        qry1.Active:=False;
        qry1.SQL.Clear;
-       qry1.SQL.Add('SELECT * From [Учасники] WHERE [Код учасника] = '+intToStr(now_view));
+       qry1.SQL.Add('SELECT * From [РЈС‡Р°СЃРЅРёРєРё] WHERE [РљРѕРґ СѓС‡Р°СЃРЅРёРєР°] = '+intToStr(now_view));
        qry1.Active:=True;
        if(now_view=1) then
           btn1.Enabled:=False;
        if(page_max>(now_view+1)) then
           btn2.Enabled:=True;
-       edt1.Text:= qry1.FieldByName('Код учасника').AsString;
-       edt2.Text:= qry1.FieldByName('Пірзвище').AsString;
-       edt3.Text:= qry1.FieldByName('Ім’я').AsString;
-       edt4.Text:= qry1.FieldByName('По батькові').AsString;
-       edt5.Text:= qry1.FieldByName('Дата народження').AsString;
-       edt6.Text:= qry1.FieldByName('Домашня адреса').AsString;
-       edt7.Text:= qry1.FieldByName('Розряд').AsString;
-       edt8.Text:= qry1.FieldByName('Код тренера').AsString;
-       edt9.Text:= qry1.FieldByName('Рейтенг учасника').AsString;
+       edt1.Text:= qry1.FieldByName('РљРѕРґ СѓС‡Р°СЃРЅРёРєР°').AsString;
+       edt2.Text:= qry1.FieldByName('РџС–СЂР·РІРёС‰Рµ').AsString;
+       edt3.Text:= qry1.FieldByName('Р†РјвЂ™СЏ').AsString;
+       edt4.Text:= qry1.FieldByName('РџРѕ Р±Р°С‚СЊРєРѕРІС–').AsString;
+       edt5.Text:= qry1.FieldByName('Р”Р°С‚Р° РЅР°СЂРѕРґР¶РµРЅРЅСЏ').AsString;
+       edt6.Text:= qry1.FieldByName('Р”РѕРјР°С€РЅСЏ Р°РґСЂРµСЃР°').AsString;
+       edt7.Text:= qry1.FieldByName('Р РѕР·СЂСЏРґ').AsString;
+       edt8.Text:= qry1.FieldByName('РљРѕРґ С‚СЂРµРЅРµСЂР°').AsString;
+       edt9.Text:= qry1.FieldByName('Р РµР№С‚РµРЅРі СѓС‡Р°СЃРЅРёРєР°').AsString;
    end else btn1.Enabled:=False;
 end;
 
