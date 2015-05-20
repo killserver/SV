@@ -1,4 +1,4 @@
-unit Unit5;
+﻿unit Unit5;
 
 interface
 
@@ -44,6 +44,7 @@ type
     procedure btn6Click(Sender: TObject);
     procedure btn7Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -281,6 +282,15 @@ begin
        btn3.Visible:=False;
        btn4.Visible:=False;
        btn5.Visible:=False;
+end;
+
+procedure TForm5.btn5Click(Sender: TObject);
+begin
+       qry1.Active:=False;
+       qry1.SQL.Clear;
+       qry1.SQL.Add('DELETE FROM [Учасники] WHERE [Код учасника] = '+inttostr(now_view));
+       qry1.ExecSQL;
+       page_max:=page_max-1;
 end;
 
 end.

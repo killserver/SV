@@ -202,10 +202,11 @@ object Form5: TForm5
     Height = 25
     Caption = #1059#1076#1072#1083#1077#1085#1080#1077
     TabOrder = 13
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 80
-    Top = 240
+    Top = 232
     Width = 75
     Height = 25
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
