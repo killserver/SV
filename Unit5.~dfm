@@ -1,0 +1,67 @@
+object Form5: TForm5
+  Left = 201
+  Top = 133
+  Width = 735
+  Height = 411
+  Caption = 'Form5'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 48
+    Width = 721
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 88
+    Top = 8
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=E:\'#1050#1055 +
+      '\'#1050#1055' '#1054#1054#1055'\'#1044#1086#1082#1091#1084#1077#1085#1090#1086#1086#1073#1110#1075' '#1075#1091#1088#1090#1082#1091' '#1079' '#1096#1072#1093#1110#1074'.mdb;Mode=Share Deny None;Ex' +
+      'tended Properties="";Persist Security Info=False;Jet OLEDB:Syste' +
+      'm database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Pass' +
+      'word="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=' +
+      '1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Tran' +
+      'sactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create S' +
+      'ystem Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:' +
+      'Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact Without Rep' +
+      'lica Repair=False;Jet OLEDB:SFP=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 24
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM ['#1059#1095#1072#1089#1085#1080#1082#1080']')
+    Left = 48
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+  end
+end

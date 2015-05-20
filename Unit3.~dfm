@@ -1,0 +1,63 @@
+object Form3: TForm3
+  Left = 282
+  Top = 166
+  Width = 928
+  Height = 489
+  Caption = #1059#1095#1072#1089#1085#1080#1082#1080' '#1090#1091#1088#1085#1110#1088#1072
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 16
+    Top = 48
+    Width = 320
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 48
+    Top = 200
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\'#1050#1055'\'#1050#1055' '#1054#1054#1055'\'#1044#1086#1082#1091#1084#1077 +
+      #1085#1090#1086#1086#1073#1110#1075' '#1075#1091#1088#1090#1082#1091' '#1079' '#1096#1072#1093#1110#1074'.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 80
+    Top = 8
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM ['#1058#1088#1077#1085#1077#1088#1080' '#1090#1072' '#1091#1095#1085#1110']')
+    Left = 144
+    Top = 8
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 24
+    Top = 8
+  end
+end
